@@ -13,3 +13,25 @@ body{
 h1{
   margin-top: 30px;
 }
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 20px;
+  list-style: none;
+}
+
+.nav-link-item{
+  font-size: 1.1rem;
+}
+
+.nav-logo{
+  width: 55px;
+}
