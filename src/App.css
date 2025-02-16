@@ -1,56 +1,136 @@
-* {
+/* * {
   font-family: "Inter", serif;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: #282d35;
-  color: #fff;
+  padding: 0;
 }
 
-header {
-  height: 90px;
-  background: #21222a;
-  padding: 30px 25px;
+header div{
+    background: #f55a5a;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-bar {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
+header div p{
+    margin: 0 10px;
 }
 
-.nav-bar h1 {
-  color: #61dafb;
-  font-size: 1.4rem;
-  font-weight: 500;
+article.journal-entry{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-main {
-    padding: 60px 30px;
-    background: url('../public/images/react-logo-half.png');
-    background-repeat: no-repeat;
-    background-position: right 65%;
+article.journal-entry .marker{
+    width: 7px;
+    margin-right: 4px;
 }
 
-main > h1{
-    padding-top: 0;
-    font-size: 2.6rem;
+.main-image-container{
+    width: 125px;
+    height: 168px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 19px;
 }
 
-.facts-list{
-    margin-top: 46px;
-    max-width: 400px;
+.main-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.facts-list > li{
-    padding-block: 10px;
+.info-container span.country {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 12px;
 }
 
-.facts-list > li::marker{
-    color: #61dafb;
-    font-size: 1.5rem;
+.info-container a {
+    color: #2B283A;
+    font-size: 0.7rem;
+}
+
+.info-container a:visited {
+    color: #918E9B;
+}
+
+.info-container h2.entry-title {
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.info-container p.trip-dates {
+    font-weight: bold;
+}
+
+.info-container p.entry-text {
+    line-height: 1.5;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+} */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.contact-card > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.contact-card > h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-group > img {
+    height: 11px;
+    margin-right: 8px;
+}
+
+.info-group > p {
+    margin-block: 3px;
+    font-size: 12px;
+    color: #2B283A;
 }
