@@ -1,5 +1,12 @@
 export default function Header() {
   return (
-    <h1>Navbar goes here</h1>
+    <>
+      <header>
+        <nav className="nav-bar">
+          <img src="/images/react-logo.png" alt="logo" width="35px" />
+          <h1>ReactFacts</h1>
+        </nav>
+      </header>
+      </>
   );
 }
