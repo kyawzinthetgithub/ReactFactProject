@@ -5,52 +5,80 @@
 
 body {
   margin: 0;
-  background: #282d35;
-  color: #fff;
+  padding: 0;
 }
 
-header {
-  height: 90px;
-  background: #21222a;
-  padding: 30px 25px;
+.container {
+  margin: 45px 40px;
 }
 
-.nav-bar {
+header div {
+  background: #f55a5a;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div p {
+  margin: 0 10px;
+}
+
+article.journal-entry {
+  display: flex;
+  justify-content: start;
+  margin: 20px 0;
+}
+
+article.journal-entry .marker {
+  width: 7px;
+  margin-right: 4px;
+}
+
+.main-image-container {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 19px;
+}
+
+.main-image {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
+  object-fit: cover;
 }
 
-.nav-bar h1 {
-  color: #61dafb;
-  font-size: 1.4rem;
-  font-weight: 500;
+.info-container span.country {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: 12px;
 }
 
-main {
-    padding: 60px 30px;
-    background: url('../public/images/react-logo-half.png');
-    background-repeat: no-repeat;
-    background-position: right 65%;
+.info-container a {
+  color: #2b283a;
+  font-size: 0.7rem;
 }
 
-main > h1{
-    padding-top: 0;
-    font-size: 2.6rem;
+.info-container a:visited {
+  color: #918e9b;
 }
 
-.facts-list{
-    margin-top: 46px;
-    max-width: 400px;
+.info-container h2.entry-title {
+  margin-top: 7px;
+  margin-bottom: 17px;
 }
 
-.facts-list > li{
-    padding-block: 10px;
+.info-container p.trip-dates {
+  font-weight: bold;
 }
 
-.facts-list > li::marker{
-    color: #61dafb;
-    font-size: 1.5rem;
+.info-container p.entry-text {
+  line-height: 1.5;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
