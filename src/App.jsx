@@ -1,36 +1,26 @@
-// import Header from "./components/Header";
-// import Entry from './components/Entry'
-import Contact from "./components/Contact";
+import Header from "./components/Header";
+import Entry from "./components/Entry";
+import data from "../data";
 
 export default function App() {
+  const EntryData = data.map((item) => {
+    return (
+      <Entry 
+        key={item.id}
+        img={item.img}
+        title={item.title}
+        country={item.country}
+        googleMapsLink={item.googleMapsLink}
+        dates={item.dates}
+        text={item.text}
+      />
+    );
+  });
+
   return (
     <>
-      <div className="contacts">
-        <Contact
-                img="/images/mr-whiskerson.png"
-                name="Mr. Whiskerson"
-                phone="(212) 555-1234"
-                email="mr.whiskaz@catnap.meow"
-            />
-            <Contact
-                img="/images/fluffykins.png"
-                name="Fluffykins"
-                phone="(212) 555-2345"
-                email="fluff@me.com"
-            />
-            <Contact
-                img="/images/felix.png"
-                name="Felix"
-                phone="(212) 555-4567"
-                email="thecat@hotmail.com"
-            />
-            <Contact 
-                img="/images/pumpkin.png"
-                name="Pumpkin"
-                phone="(0800) CAT KING"
-                email="pumpkin@scrimba.com"
-            />
-      </div>
+      <Header />
+      <div className="container">{EntryData}</div>
     </>
   );
 }
